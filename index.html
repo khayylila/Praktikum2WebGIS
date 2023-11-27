@@ -98,9 +98,6 @@
                         <td colspan="2">' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Gambar'] !== null ? '<img src="images/' + String(feature.properties['Gambar']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td colspan="2">' + (feature.properties['Desk_QS WUR'] !== null ? autolinker.link(feature.properties['Desk_QS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -108,6 +105,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Desk_Fakultas'] !== null ? autolinker.link(feature.properties['Desk_Fakultas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                <tr>\
+                        <td colspan="2">' + (feature.properties['Gambar'] !== null ? '<img src="images/' + String(feature.properties['Gambar']).replace(/[\\\/:]/g, '_')..trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
